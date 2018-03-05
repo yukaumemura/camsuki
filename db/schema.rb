@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305075851) do
+ActiveRecord::Schema.define(version: 20180305080921) do
+
+  create_table "it_skills", force: :cascade do |t|
+    t.string   "ITimage"
+    t.string   "ITName"
+    t.integer  "user_id"
+    t.string   "existence"
+    t.string   "educate"
+    t.string   "Field"
+    t.string   "Itgenre"
+    t.integer  "Accession"
+    t.integer  "Resident"
+    t.string   "TypeIndustry"
+    t.integer  "dgpn"
+    t.integer  "dbweb"
+    t.integer  "dbopen"
+    t.integer  "dbnclusion"
+    t.integer  "dbfirmware"
+    t.integer  "dbcontrol"
+    t.integer  "frequency"
+    t.string   "ITRemarks"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "it_skills", ["user_id"], name: "index_it_skills_on_user_id"
 
   create_table "microposts", force: :cascade do |t|
     t.integer  "user_id"

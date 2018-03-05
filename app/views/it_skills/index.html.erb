@@ -1,0 +1,93 @@
+<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <div class="panel panel-default">
+  <div class="panel-heading"><h4>ITジャンル一覧</h4></div>
+        <div class="panel-body">
+
+       <li class="list-group-item"><%= link_to "プログラミング言語", '#'  %></li>
+            　<li class="list-group-item"><%= link_to "フレームワーク", '#' %></li>
+              　<li class="list-group-item"><%= link_to "データベース", '#' %></li>
+              　<li class="list-group-item"><%= link_to "バージョン管理システム",'#' %></li>
+              　<li class="list-group-item"><%= link_to "CMS開発", '#' %></li>
+              　<li class="list-group-item"><%= link_to "OS", '#' %></li>
+              　<li class="list-group-item"><%= link_to "ミドルウェア", '#' %></li>
+              　<li class="list-group-item"><%= link_to "アプリケーション", '#' %></li>
+              　<li class="list-group-item"><%= link_to "語学", '#' %></li>
+              　<li class="list-group-item"><%= link_to "資格", '#' %></li>
+              　<li class="list-group-item"><%= link_to "デザイン", '#' %></li>
+              　<li class="list-group-item"><%= link_to "その他", '#' %></li>
+              　
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+</div>
+</div>
+
+    <div class="col-sm-10">
+      <div class="panel panel-default">
+  <div class="panel-heading">登録技術一覧表</div>
+  <div class="panel-body">
+<p>内容の詳細と変更を行いたい場合はITスキル名のリンクよりご変更ください</p>
+<p><%= link_to 'IT技術新規登録', new_it_skill_path %></p>
+<table class="table">
+  <thead>
+    <tr class="success">
+      <th>選択</th>
+      <th>ロゴ</th>
+      <th>Itスキル名</th>
+      <th>属性</th>
+      <th>Itジャンル</th>
+      <th>受託</th>
+      <th>常駐</th>
+      <th>担当業種</th>
+      <th>汎用機系</th>
+      <th>WEB</th>
+      <th>OPEN</th>
+      <th>組み込み</th>
+      <th>ファームウエア</th>
+      <th>制御</th>
+      <th>使用頻度率</th>
+      <th>手続き</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @it_skills.each do |it_skill| %>
+      <tr>
+        <td><input type="checkbox" value="checkboxA"></td>
+        <td><%= it_skill.ITimage %></td>
+        <td><%= link_to it_skill.ITName, it_skill %></td>
+        <td><%= it_skill.Field %></td>
+        <td><%= it_skill.Itgenre %></td>
+        <td><%= it_skill.Accession %></td>
+        <td><%= it_skill.Resident %></td>
+        <td><%= it_skill.TypeIndustry %></td>
+        <td><%= it_skill.dgpn %></td>
+        <td><%= it_skill.dbweb %></td>
+        <td><%= it_skill.dbopen %></td>
+        <td><%= it_skill.dbnclusion %></td>
+        <td><%= it_skill.dbfirmware %></td>
+        <td><%= it_skill.dbcontrol %></td>
+        <td><%= it_skill.frequency %></td>
+        <td><%= link_to 'Destroy', it_skill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+
+    </div>
+  </div>
+</div>

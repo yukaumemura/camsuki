@@ -1,0 +1,163 @@
+<p id="notice"><%= notice %></p>
+<h2>詳細をご確認の上でご変更リンクよりご登録ください</h2>
+<%= form_for(@it_skill) do |f| %>
+  <% if @it_skill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@it_skill.errors.count, "error") %> prohibited this it_skill from being saved:</h2>
+
+      <ul>
+      <% @it_skill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-4 sidenav">
+      <div class="well">
+            <div class="well">
+        　（<%= f.label :ITName,'IT技術名' %>）　<%= @it_skill.ITName %>
+        <div class="well">
+        <p><%= f.label :ITimage,'ITスキルロゴ' %>：<%= @it_skill.ITimage %></p>
+         </div>
+      </div>
+      <div class="well">
+　　　　　<table class="table table-striped">
+    <tbody>
+      <tr>
+        <td><%= f.label :Itgenre,'ITジャンル' %></td>
+        <td><%= @it_skill.Itgenre %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :existence,'該当案件' %></td>
+        <td><%= @it_skill.existence %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :educate ,'教育体制' %></td>
+        <td><%= @it_skill.educate %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :Field,'属性' %></td>
+        <td><%= @it_skill.Field %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :frequency ,'使用頻度率（％）' %></td>
+        <td><%= @it_skill.frequency %></td>
+      </tr>
+    </tbody>
+  </table>
+      </div>
+      <p><%= link_to '一覧表に戻る', it_skills_path %></p>
+      <p><%= link_to '変更', edit_it_skill_path(@it_skill) %></p>
+      </div>
+    </div>
+    <div class="col-sm-6 text-left">
+      <div class="panel panel-default text-left">
+        <div class="panel-heading">
+              <p contenteditable="true">HAVE</p>
+        </div>
+          <div class="panel-body">
+              <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-thumbs-up"></span> Like
+              </button>
+          </div>
+      </div>
+      <div class="panel panel-default text-left">
+        <div class="panel-heading">
+              <p contenteditable="true">WHONT</p>
+        </div>
+          <div class="panel-body">
+              <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-thumbs-up"></span> Like
+              </button>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+            <%= f.label :TypeIndustry,'担当業種' %><br>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <%= @it_skill.TypeIndustry %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading"><%= f.label :Remarks,'備考' %></div>
+            <div class="panel-body  text-left">
+              <%= @it_skill.ITRemarks %>
+              </div>
+          </div>
+      </div>
+    </div>
+      <div class="row">
+        
+      </div>
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>受託開発割合</p>
+        <table class="table">
+      	<tbody>
+      		<tr>
+      			<th colspan="2"></th>
+      		</tr>
+      		<tr>
+      			<th><%= f.label :Accession,'受託' %></th>
+      			<td><%= @it_skill.Accession %></td>
+      		</tr>
+      		<tr>
+      			<th><%= f.label :Resident,'常駐' %></th>
+      			<td><%= @it_skill.Resident %></td>
+      		</tr>
+      	</tbody>
+      </table>
+      </div>
+      <div class="panel panel-default">
+            <div class="panel-heading">開発ジャンル</div>
+            <div class="panel-body">
+              <table class="table">
+            	<tbody>
+            	  <tbody>
+            		<tr>
+            			<th><%= f.label :dgpn,'汎用機系' %></th>
+            			<td><%= @it_skill.dbnclusion %></td>
+            		</tr>
+            		</tr>
+            		<tr>
+            			<th> <%= f.label :dbweb,'WEB' %></th>
+            			<td><%= @it_skill.dgpn %></td>
+            		</tr>
+            		<tr>
+            			<th><%= f.label :dbopen,'OPEN' %></th>
+            			<td><%= @it_skill.dbweb %></td>
+            		</tr>
+            		<tr>
+            			<th><%= f.label :dbnclusion,'組み込み' %></th>
+            		<td><%= @it_skill.dbopen %></td>
+            		</tr>
+            		<tr>
+            			<th><%= f.label :dbfirmware,'ファームウエア' %></th>
+            			<td><%= @it_skill.dbfirmware %></td>
+            		</tr>
+            		<tr>
+            			<th><%= f.label :dbcontrol,'制御' %></th>
+            			<td><%= @it_skill.dbcontrol %></td>
+            		</tr>
+            		<tr>
+            	</tbody>
+            </table>
+            </div>
+          </div>
+      
+    </div>
+  </div>
+</div>
+<% end %>

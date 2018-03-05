@@ -1,16 +1,5 @@
 Rails.application.routes.draw do
   
-  get 'sessions/new'
-
-  get 'users/new'
-
-  get 'users/show'
-
-  get 'users/edit'
-
-  get 'users/followers'
-
-  get 'users/followings'
 
   root to: 'static_pages#home'
   get    'signup', to: 'users#new'
@@ -27,4 +16,5 @@ Rails.application.routes.draw do
   
   resources :microposts
   resources :relationships, only: [:create, :destroy]
+  resources :it_skills
 end

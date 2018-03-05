@@ -1,0 +1,146 @@
+<%= form_for(@it_skill) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %> <!-- ここを追加 -->
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-4 sidenav">
+      <div class="well">
+            <div class="well">
+        <%= f.label :ITName,'IT技術名' %><%= f.text_field :ITName %>
+        <div class="well">
+        ITロゴ
+         </div>
+      </div>
+      <div class="well">
+        <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td><%= f.label :Itgenre,'ITジャンル' %></td>
+        <td><%= f.text_field :Itgenre %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :existence,'該当案件' %></td>
+        <td><%= f.text_field :existence %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :educate ,'教育体制' %></td>
+        <td><%= f.text_field :educate %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :Field,'属性' %></td>
+        <td> <%= f.text_field :Field %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :frequency ,'使用頻度率（％）' %></td>
+        <td><%= f.text_field :frequency %></td>
+      </tr>
+    </tbody>
+  </table>
+      </div>
+      <p><%= link_to '一覧表に戻る', it_skills_path %></p>
+      </div>
+    </div>
+    <div class="col-sm-5 text-left">
+      <div class="panel panel-default text-left">
+        <div class="panel-heading">
+              <p contenteditable="true">HAVE</p>
+        </div>
+          <div class="panel-body">
+              <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-thumbs-up"></span> Like
+              </button>
+          </div>
+      </div>
+      <div class="panel panel-default text-left">
+        <div class="panel-heading">
+              <p contenteditable="true">WHONT</p>
+        </div>
+          <div class="panel-body">
+              <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-thumbs-up"></span> Like
+              </button>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading"><%= f.label :TypeIndustry,'担当業種' %></div>
+            <div class="panel-body  text-left">
+              <%= f.text_field :TypeIndustry %>
+              </div>
+          </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading"><%= f.label :Remarks,'備考' %></div>
+            <div class="panel-body  text-left">
+              <%= text_area :ITemarks, :size => "300x500" %>
+              </div>
+          </div>
+      </div>
+    </div>
+      
+    </div>
+    <div class="col-sm-3 sidenav">
+      <div class="well">
+        <p>受託開発割合</p>
+        <table class="table">
+      	<tbody>
+      		<tr>
+      			<th colspan="2"></th>
+      		</tr>
+      		<tr>
+      			<th><%= f.label :Accession,'受託' %></th>
+      			<td><%= f.number_field :Accession %></td>
+      		</tr>
+      		<tr>
+      			<th><%= f.label :Resident,'常駐' %></th>
+      			<td><%= f.number_field :Resident %></td>
+      		</tr>
+      	</tbody>
+      </table>
+      </div>
+      <div class="panel panel-default">
+            <div class="panel-heading">開発ジャンル</div>
+            <div class="panel-body">
+              <table class="table">
+            	<tbody>
+            	  <tbody>
+            		<tr>
+            			<th><%= f.label :dgpn,'汎用機系' %></th>
+            			<td><%= f.number_field :dbnclusion %></td>
+            		</tr>
+            		</tr>
+            		<tr>
+            			<th> <%= f.label :dbweb,'WEB' %></th>
+            			<td><%= f.number_field :dgpn %></td>
+            		</tr>
+            		<tr>
+            			<th><%= f.label :dbopen,'OPEN' %></th>
+            			<td><%= f.number_field :dbweb %></td>
+            		</tr>
+            		<tr>
+            			<th><%= f.label :dbnclusion,'組み込み' %></th>
+            		<td><%= f.number_field :dbopen %></td>
+            		</tr>
+            		<tr>
+            			<th><%= f.label :dbfirmware,'ファームウエア' %></th>
+            			<td><%= f.number_field :dbfirmware %></td>
+            		</tr>
+            		<tr>
+            			<th> <%= f.label :dbcontrol,'制御' %></th>
+            			<td><%= f.number_field :dbcontrol %></td>
+            		</tr>
+            		<tr>
+            	</tbody>
+            </table>
+            </div>
+          </div>
+      <div class="well">
+        <%= f.submit '登録',class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

@@ -1,0 +1,171 @@
+<div class="row content">
+    <div class="col-sm-4 sidenav">
+      <div class="well">
+     <section class="user_info">
+      <p>
+        <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %> <!-- ここを追加 -->
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </p>
+         <ol class="breadcrumb">
+        <li>(<%= link_to "ツイート", root_path(@user) %><span class="badge"><%= @user.microposts.count %></span></li>
+        <li><%= link_to "フォロー", followings_user_path(@user) %><span class="badge"><%= @user.following_users.count %></span></li>
+        <li><%= link_to "フォロワー", followers_user_path(@user) %><span class="badge">0</span>）</li>
+      </ol>
+    </section>
+ </div>
+    
+<div class="panel panel-primary">
+      <div class="panel-heading">企業情報</div>
+      <div class="panel-body">
+    
+      <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+      <%= @user.RecruitEmail %><br>
+      <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+      <%= @user.TelNam %><br>
+      <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+      <%= @user.fax %><br>
+       <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+      <%= @user.officialhp %><br>
+      <%= f.label :Establishment ,"設立年月日" %>
+      <%= @user.Establishment %><br>
+      <%= f.label :listing ,"上場有無" %>
+      <%= @user.listing %><br>
+      <%= f.label :Capitalstock ,"資本金（単位：万円）" %>
+      <%= @user.Capitalstock %><br>
+      <%= f.label :zipcode ,"郵便番号" %>
+      <%= @user.zipcode %><br>
+     
+     <%= f.label :dwelling ,"住所" %>
+     <%= @user.dwelling %><br>
+     <%= f.label :BuildName ,"建物名" %>
+     <%= @user.BuildName %><br>
+		
+    <% end %>
+</div>
+  </div>
+  <div class="panel panel-default">
+  <div class="panel-heading">この企業様のIT技術者不足情報</div>
+  <div class="panel-body">
+    グラフ解析結果
+    <p>グラフ長さが大きいほど不足してます。</p>
+    </div>
+</div>
+<div class="panel panel-info">
+      <div class="panel-heading">企業PR</div>
+      <div class="panel-body">
+        <%= @user.Profile %>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-8">
+      <h1><small>企業技術データ</small></h1>
+      <hr>
+      
+      <div class="panel panel-default">
+	<div class="panel-heading">
+		<h5 class="panel-title">主なIT活動</h5>
+	</div>
+	<div class="panel-body">
+		<section class="row text-center placeholders">
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>受託/常駐割合</h4>
+              <div class="text-muted">Something else</div>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>開発ジャンル</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>業務領域</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>担当業界</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+      </section>
+	</div>
+</div>
+  <div class="panel panel-success">
+	<div class="panel-heading">
+		<small>お取り扱い中のIT技術</small>
+	</div>
+	<div class="panel-body">
+		<section class="row text-center placeholders">
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h6>プログラミング言語</h6>
+              <div class="text-muted">Something else</div>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h6>フレームワーク</h6>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h6>バージョン管理システム</h6>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h6>CSM開発</h6>
+              <span class="text-muted">Something else</span>
+            </div>
+      </section>
+      	<section class="row text-center placeholders">
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h6>OS</h6>
+              <div class="text-muted">Something else</div>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h6>ミドルウエア</h6>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h6>アプリケーション</h6>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h6>CSM開発</h6>
+              <span class="text-muted">Something else</span>
+            </div>
+      </section>
+      <section class="row text-center placeholders">
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h6>ソフトウエア</h6>
+              <div class="text-muted">Something else</div>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h6>デザイン</h6>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h6>その他</h6>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h6>未登録</h6>
+              <span class="text-muted">Something else</span>
+            </div>
+      </section>
+	</div>
+</div>
+
+    </div>
+    
+  </div>

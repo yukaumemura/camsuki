@@ -1,0 +1,122 @@
+<h1>プロフの更新</h1>
+
+  <p class="text-center">プロフィールにご変更があれば、更新してください</p>
+  <div class="row">
+     <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %> <!-- ここを追加 -->
+    <div class="col-sm-5 well">
+      
+      <%= f.label :name,"ユーザー名" %></th>
+      <%= f.text_field :name, class: 'form-control' %>
+      <div class="well">
+        
+       
+        <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        <br>
+         <br>
+          <br>
+      </div>
+      <div class="well">
+         <p>連絡先/パスワードの設定</p>
+         <table class="table">
+        	<tbody>
+        		<tr>
+        			<th><span class="glyphicon glyphicon-envelope" aria-hidden="true">　お問い合わせ</th>
+        			<td><%= f.email_field :RecruitEmail, class: 'form-control' %></td>
+        		</tr>
+        			<th><span class="glyphicon glyphicon-envelope" aria-hidden="true">　サイト管理用</th>
+        			<td><%= f.email_field :email, class: 'form-control' %></td>
+        		</tr>
+        		<tr>
+        			<th><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></th>
+        			<td><%= f.text_field :TelNam, class: 'form-control' %></td>
+        		<tr>
+        			<th><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></th>
+        			<td><%= f.text_field :fax, class: 'form-control' %></td>
+        		<tr>
+        	</tbody>
+        </table>
+      
+      </div>
+       <div class="well">
+        <p>SNS</p>
+        <p>
+          <span class="label label-default">News</span>
+          <span class="label label-primary">W3Schools</span>
+          <span class="label label-success">Labels</span>
+          <span class="label label-info">Football</span>
+          <span class="label label-warning">Gaming</span>
+          <span class="label label-danger">Friends</span>
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-7">
+    
+      <div class="row">
+        <div class="col-sm-12">
+         
+      <div class="well">
+        <p>企業情報</p>
+        <table class="table">
+	<tbody>
+		<tr>
+			<th><%= f.label :Establishment,"設立年月日" %></th>
+			<th><%= f.label :listing ,"上場有無" %></th>
+		<th><%= f.label :Capitalstock ,"資本金" %></th>
+		</tr>
+		<tr>
+				<td> <%= f.text_field :Establishment, class: 'form-control' %></td>
+			<td><%= f.text_field :listing, class: 'form-control' %></td>
+			<td><%= f.text_field :Capitalstock, class: 'form-control' %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :officialhp ,"企業HP" %></th>
+			<td colspan="2"><%= f.text_field :officialhp, class: 'form-control' %></td>
+		</tr>
+	</tbody>
+</table>
+      </div>
+      
+      <div class="well">
+          <%= f.label :profile ,"企業自己紹介" %>
+          <%= text_area :profile, :size => "100x20" %>
+          </div>
+      
+        <div class="panel panel-default">
+          <div class="panel-heading"><p>企業所在地</p></div>
+               <div class="panel-body">
+            <div class="table-responsive">
+              <table class="table">
+                <tbody>
+                		
+                		<tr>
+                			<th><%= f.label :zipcode ,"郵便番号" %></th>
+                			<td><%= f.text_field :zipcode %></td>
+                    	</tr>
+                		<tr>
+                			<th> <%= f.label :dwelling ,"住所" %></th>
+                			<td><%= f.text_field :dwelling %></td>
+                		</tr>
+                		<tr>
+                			<th><%= f.label :BuildName ,"建物名" %></th>
+                			<td> <%= f.text_field :BuildName, class: 'form-control' %></td>
+                		</tr>
+                		<tr>
+                			<th></th>
+                			<td></td>
+                		</tr>
+                	</tbody>
+              </table>
+             <%= f.submit "決定", class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+      </div>
+  </div>
+
+      
+  
+ <% end %>

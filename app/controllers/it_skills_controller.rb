@@ -21,6 +21,9 @@ class ItSkillsController < ApplicationController
   # GET /it_skills/1/edit
   def edit
   end
+  
+  def ItItem
+  end
 
   # POST /it_skills
   # POST /it_skills.json
@@ -70,6 +73,8 @@ class ItSkillsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def it_skill_params
-      params.require(:it_skill).permit(:ITimage, :ITName, :user_id, :existence, :educate, :Field, :Itgenre, :Accession, :Resident, :TypeIndustry, :dgpn, :dbweb, :dbopen, :dbnclusion, :dbfirmware, :dbcontrol, :frequency, :ITRemarks)
+      params.require(:it_skill).permit(:ITimage, :ITName, :user_id, :existence, :educate, :Field, :Itgenre, :Accession, 
+      :Resident, :TypeIndustry, :dgpn, :dbweb, :dbopen, :dbnclusion, :dbfirmware, :dbcontrol, :frequency, :ITRemarks,
+      :Skilllogo)
     end
 end

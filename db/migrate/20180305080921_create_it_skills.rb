@@ -1,7 +1,8 @@
 class CreateItSkills < ActiveRecord::Migration
   def change
     create_table :it_skills do |t|
-      t.string :ITimage
+      mount_uploader :ITimage,ITimageUploader 
+      #t.string :ITimage
       t.string :ITName
       t.references :user, index: true, foreign_key: true
       t.string :existence

@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'cam_search/index'
+
+  get 'it_skills/ItItem'
+
+  get 'ranking/have', to: 'ranking#have' 
+  get 'ranking/want', to: 'ranking#want' 
 
   root to: 'static_pages#home'
   get    'signup', to: 'users#new'

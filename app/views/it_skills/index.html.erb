@@ -64,7 +64,8 @@
     <% @it_skills.each do |it_skill| %>
       <tr>
         <td><input type="checkbox" value="checkboxA"></td>
-        <td><%= it_skill.ITimage %></td>
+        <td>
+          <%= it_skill.ITimage %></td>
         <td><%= link_to it_skill.ITName, it_skill %></td>
         <td><%= it_skill.Field %></td>
         <td><%= it_skill.Itgenre %></td>

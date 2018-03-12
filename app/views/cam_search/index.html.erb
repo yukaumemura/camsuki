@@ -1,2 +1,960 @@
-<h1>CamSearch#index</h1>
-<p>Find me in app/views/cam_search/index.html.erb</p>
+<ol class="breadcrumb">
+  <li><a href="Search.html">企業情報検索</a></li>
+</ol>
+<div class="container">
+  <div class="row">
+  <div class="panel panel-default">
+  <div class="panel-heading">企業情報検索</div>
+    <div class="panel-body">こちらより企業の技術情報を検索してください</div>
+      <h4>企業所在地</h4>
+      <div class="pretty p-default">
+          <div class="state">
+      <table class="table table-hover">
+          <tbody>
+            <tr>
+              <td class="active">北海道　/　東北</td>
+              <td>
+                <input type="checkbox" name="prefectures" value="県" />北海道
+                <input type="checkbox" name="prefectures" value="県" />青森県
+                <input type="checkbox" name="prefectures" value="県" />岩手県
+                <input type="checkbox" name="prefectures" value="県" />宮城県
+                <input type="checkbox" name="prefectures" value="県" />秋田県
+                <input type="checkbox" name="prefectures" value="県" />山形県
+                <input type="checkbox" name="prefectures" value="県" />福島県
+              </td>
+            </tr>
+            <tr>
+              <td class="active">関東</td>
+              <td>
+                <input type="checkbox" name="prefectures" value="県" />茨城県
+                <input type="checkbox" name="prefectures" value="県" />栃木県
+                <input type="checkbox" name="prefectures" value="県" />群馬県
+                <input type="checkbox" name="prefectures" value="県" />埼玉県
+                <input type="checkbox" name="prefectures" value="県" />千葉県
+                <input type="checkbox" name="prefectures" value="県" />東京都
+                <input type="checkbox" name="prefectures" value="県" />神奈川県
+              </td>
+            </tr>
+            <tr>
+             <td class="active">中部</td>
+             <td>
+                     <input type="checkbox" name="prefectures" value="県" />新潟県
+                     <input type="checkbox" name="prefectures" value="県" />富山県
+                     <input type="checkbox" name="prefectures" value="県" />石川県
+                     <input type="checkbox" name="prefectures" value="県" />福井県
+                     <input type="checkbox" name="prefectures" value="県" />山梨県
+                     <input type="checkbox" name="prefectures" value="県" />長野県
+                     <input type="checkbox" name="prefectures" value="県" />岐阜県
+                     <input type="checkbox" name="prefectures" value="県" />静岡県
+                     <input type="checkbox" name="prefectures" value="県" />愛知県
+                   </td>
+                 </tr>
+                 <tr>
+             <td class="active">近畿</td>
+             <td>
+                   <input type="checkbox" name="prefectures" value="県" />三重県
+                   <input type="checkbox" name="prefectures" value="県" />滋賀県
+                   <input type="checkbox" name="prefectures" value="県" />京都府
+                   <input type="checkbox" name="prefectures" value="県" />大阪府
+                   <input type="checkbox" name="prefectures" value="県" />兵庫県
+                   <input type="checkbox" name="prefectures" value="県" />奈良県
+                   <input type="checkbox" name="prefectures" value="県" />和歌山県
+                 </td>
+               </tr>
+               <tr>
+           <td class="active">中国</td>
+           <td>
+                   <input type="checkbox" name="prefectures" value="県" />鳥取県
+                   <input type="checkbox" name="prefectures" value="県" />島根県
+                   <input type="checkbox" name="prefectures" value="県" />岡山県
+                   <input type="checkbox" name="prefectures" value="県" />広島県
+                   <input type="checkbox" name="prefectures" value="県" />山口県
+                 </td>
+               </tr>
+               <tr>
+           <td class="active">四国</td>
+           <td>
+                 <input type="checkbox" name="prefectures" value="県" />徳島県
+                 <input type="checkbox" name="prefectures" value="県" />香川県
+                 <input type="checkbox" name="prefectures" value="県" />愛媛県
+                 <input type="checkbox" name="prefectures" value="県" />高知県
+               </td>
+             </tr>
+             <tr>
+               <td class="active">九州　/　沖縄</td>
+               <td>
+                 <input type="checkbox" name="prefectures" value="県" />福岡県
+                 <input type="checkbox" name="prefectures" value="県" />佐賀県
+                 <input type="checkbox" name="prefectures" value="県" />長崎県
+                 <input type="checkbox" name="prefectures" value="県" />熊本県
+                 <input type="checkbox" name="prefectures" value="県" />大分県
+                 <input type="checkbox" name="prefectures" value="県" />宮崎県
+                 <input type="checkbox" name="prefectures" value="県" />鹿児島県
+                 <input type="checkbox" name="prefectures" value="県" />沖縄県
+           </td>
+           <tr>
+           </tbody>
+     　　</table>
+            <h3>業界</h3>
+             <table class="table table-hover">
+                 <tbody>
+                   <tr>
+  			<th colspan="2" class="active">IT / 通信</th>
+        <td>
+          <input type="checkbox" name="BusinessDomain" value="ソフトウェア・情報処理" />ソフトウェア・情報処理
+          <input type="checkbox" name="BusinessDomain" value="通信" />通信
+          <input type="checkbox" name="BusinessDomain" value="インターネット関連" />インターネット関連
+          <input type="checkbox" name="BusinessDomain" value="その他IT・通信系" />その他IT・通信系
+        </td>
+  		</tr>
+  		<tr>
+  			<th rowspan="2"class="active">メーカー系</th>
+  			<th class="active">電気/電子/機械系</th>
+        <td>
+          <input type="checkbox" name="BusinessDomain" value="総合電機" />総合電機
+          <input type="checkbox" name="BusinessDomain" value="コンピュータ・通信機器・OA機器関連" />コンピュータ・通信機器・OA機器関連
+          <input type="checkbox" name="BusinessDomain" value="半導体・電子・電気部品" />半導体・電子・電気部品
+          <input type="checkbox" name="BusinessDomain" value="家電・AV機器・ゲーム機器" />家電・AV機器・ゲーム機器<br>
+          <input type="checkbox" name="BusinessDomain" value="精密機器・計測機器" />精密機器・計測機器
+          <input type="checkbox" name="BusinessDomain" value="重電・産業用電気機器" />重電・産業用電気機器
+          <input type="checkbox" name="BusinessDomain" value=">機械関連" />機械関連<br>
+          <input type="checkbox" name="BusinessDomain" value="自動車・輸送機器" />自動車・輸送機器
+          <input type="checkbox" name="BusinessDomain" value="医療機器" />医療機器
+          <input type="checkbox" name="BusinessDomain" value="プラント・設備" />プラント・設備
+          <input type="checkbox" name="BusinessDomain" value="その他メーカー(電気・電子・機械系)" />その他メーカー(電気・電子・機械系)
+        </td>
+      </tr>
+      <tr>
+  			<th class="active">素材/医薬品他</th>
+        <td>
+          <input type="checkbox" name="BusinessDomain" value="" />化学・石油・ガラス・セラミック・セメント
+          <input type="checkbox" name="BusinessDomain" value="" />鉄鋼・金属
+          <input type="checkbox" name="BusinessDomain" value="" />住宅・建材・エクステリア
+          <input type="checkbox" name="BusinessDomain" value="" />繊維・服飾雑貨・皮革製品<br>
+          <input type="checkbox" name="BusinessDomain" value="" />医薬品・化粧品・バイオ
+          <input type="checkbox" name="BusinessDomain" value="" />食料品
+          <input type="checkbox" name="BusinessDomain" value="" />紙・パルプ
+          <input type="checkbox" name="BusinessDomain" value="" />ファッション・アパレル・アクセサリー
+          <input type="checkbox" name="BusinessDomain" value="" />インテリア
+          <input type="checkbox" name="BusinessDomain" value="" />その他メーカー(その他)
+        </td>
+      </tr>
+  		<tr>
+  			<th rowspan="2"class="active">商社系</th>
+  			<th class="active">電気/電子/機械系</th>
+        <td>
+          <input type="checkbox" name="BusinessDomain" value="コンピュータ・通信機器・OA機器関連(商社)" />コンピュータ・通信機器・OA機器関連(商社)
+          <input type="checkbox" name="BusinessDomain" value="半導体・電子・電気部品(商社)" />半導体・電子・電気部品(商社)<br>
+          <input type="checkbox" name="BusinessDomain" value="家電・AV機器・ゲーム機器(商社)" />家電・AV機器・ゲーム機器(商社)
+          <input type="checkbox" name="BusinessDomain" value="精密機器・計測機器(商社)" />精密機器・計測機器(商社)
+          <input type="checkbox" name="BusinessDomain" value="重電・産業用電気機器(商社)" />重電・産業用電気機器(商社)
+          <input type="checkbox" name="BusinessDomain" value="機械関連(商社)" />機械関連(商社)<br>
+          <input type="checkbox" name="BusinessDomain" value=">自動車・輸送機器(商社)" />自動車・輸送機器(商社)
+          <input type="checkbox" name="BusinessDomain" value="医療機器(商社)" />医療機器(商社)
+          <input type="checkbox" name="BusinessDomain" value="その他商社(電気・電子・機械系)" />その他商社(電気・電子・機械系)
+          </td>
+      </tr>
+  		<tr>
+  			<th class="active">総合商社/素材/医薬品他</th>
+        <td>
+          <input type="checkbox" name="BusinessDomain" value="総合商社" />総合商社
+          <input type="checkbox" name="BusinessDomain" value="化学・石油・ガラス・セラミック・セメント(商社)" />化学・石油・ガラス・セラミック・セメント(商社)
+          <input type="checkbox" name="BusinessDomain" value="鉄鋼・金属(商社)" />鉄鋼・金属(商社)
+          <input type="checkbox" name="BusinessDomain" value="住宅・建材・エクステリア(商社)" />住宅・建材・エクステリア(商社)<br>
+          <input type="checkbox" name="BusinessDomain" value="繊維・服飾雑貨・皮革製品(商社)" />繊維・服飾雑貨・皮革製品(商社)
+          <input type="checkbox" name="BusinessDomain" value="医薬品・化粧品・バイオ(商社)" />医薬品・化粧品・バイオ(商社)
+          <input type="checkbox" name="BusinessDomain" value="食料品(商社)" />食料品(商社)
+          <input type="checkbox" name="BusinessDomain" value="紙・パルプ(商社)" />紙・パルプ(商社)<br>
+          <input type="checkbox" name="BusinessDomain" value="ファッション・アパレル・アクセサリー(商社)" />ファッション・アパレル・アクセサリー(商社)
+          <input type="checkbox" name="BusinessDomain" value="インテリア(商社)" />インテリア(商社)
+           <input type="checkbox" name="BusinessDomain" value="その他商社(その他)" />その他商社(その他)
+        </td>
+      </tr>
+      <tr>
+  			<th colspan="2" class="active">流通/小売系</th>
+        <td>
+          <input type="checkbox" name="BusinessDomain" value=" 自動車(ディーラー)" /> 自動車(ディーラー)
+          <input type="checkbox" name="BusinessDomain" value="ファッション・アパレル・アクセサリー(小売)" />ファッション・アパレル・アクセサリー(小売)
+          <input type="checkbox" name="BusinessDomain" value="スポーツ用品(商社・小売)" />スポーツ用品(商社・小売)<br>
+          <input type="checkbox" name="BusinessDomain" value="呉服・寝装品(商社・小売)" />呉服・寝装品(商社・小売)
+          <input type="checkbox" name="BusinessDomain" value="スーパー・CVS・生協" />スーパー・CVS・生協
+          <input type="checkbox" name="BusinessDomain" value="カメラ・メガネ・電気・OA(小売)" />カメラ・メガネ・電気・OA(小売)
+          <input type="checkbox" name="BusinessDomain" value="百貨店" />百貨店
+          <input type="checkbox" name="BusinessDomain" value="音楽・書籍(小売)" />音楽・書籍(小売)<br>
+          <input type="checkbox" name="BusinessDomain" value="化粧品・医薬品(小売)" />化粧品・医薬品(小売)
+          <input type="checkbox" name="BusinessDomain" value="ホームセンター・DIY" />ホームセンター・DIY
+           <input type="checkbox" name="BusinessDomain" value="石油製品(小売)" />石油製品(小売)
+           <input type="checkbox" name="BusinessDomain" value="運輸・倉庫" />運輸・倉庫
+            <input type="checkbox" name="BusinessDomain" value="その他流通・小売" />その他流通・小売
+        </td>
+  		</tr>
+  		<tr>
+  			<th colspan="2"class="active" >流通/小売系</th>
+        <td>
+          <input type="checkbox" name="" value="職業紹介・人材派遣">職業紹介・人材派遣
+         <input type="checkbox" name="" value="ホテル・旅行">ホテル・旅行
+         <input type="checkbox" name="" value="レジャー・アミューズメント・スポーツ施設">レジャー・アミューズメント・スポーツ施設
+         <input type="checkbox" name="" value="フードサービス・飲食">フードサービス・飲食<br>
+         <input type="checkbox" name="" value="警備・メンテナンス・清掃">警備・メンテナンス・清掃
+         <input type="checkbox" name="" value="理容・美容・エステティック">理容・美容・エステティック
+         <input type="checkbox" name="" value="医療・福祉関連">医療・福祉関連
+         <input type="checkbox" name="" value="冠婚葬祭業">冠婚葬祭業
+         <input type="checkbox" name="" value="その他サービス">その他サービス
+        </td>
+      </tr>
+      <tr>
+  			<th colspan="2" class="active" >専門コンサル系</th>
+        <td>
+          <input type="checkbox" name="" value="ビジネスコンサルタント・シンクタンク・コンサルティングファーム"/>ビジネスコンサルタント・シンクタンク・コンサルティングファーム
+          <input type="checkbox" name="" value=""/>その他専門コンサル
+        </td>
+      </tr>
+      <tr>
+  			<th colspan="2" class="active" >マスコミ系</th>
+        <td>
+          <input type="checkbox" name="" value="ゲーム">ゲーム
+         <input type="checkbox" name="" value="放送・出版・映像・音響">放送・出版・映像・音響
+         <input type="checkbox" name="" value="広告・デザイン・イベント">広告・デザイン・イベント
+         <input type="checkbox" name="" value="印刷">印刷
+         <input type="checkbox" name="" value="その他マスコミ系">その他マスコミ系
+        </td>
+      </tr>
+      <tr>
+        <th colspan="2" class="active" >金融/保険系</th>
+        <td>
+          <input type="checkbox" name="" value="銀行">銀行
+          <input type="checkbox" name="" value="信託銀行">信託銀行
+          <input type="checkbox" name="" value="労働・信用金庫・信用組合">労働・信用金庫・信用組合
+          <input type="checkbox" name="" value="証券・投資銀行">証券・投資銀行
+         <input type="checkbox" name="" value="投資信託・投資顧問">投資信託・投資顧問<br>
+         <input type="checkbox" name="" value="生命保険">生命保険
+         <input type="checkbox" name="" value="損害保険">損害保険
+          <input type="checkbox" name="" value="リース・レンタル">リース・レンタル
+         <input type="checkbox" name="" value="商品取引">商品取引
+         <input type="checkbox" name="" value="消費者金融">消費者金融
+         <input type="checkbox" name="" value="政府系金融機関">政府系金融機関
+         <input type="checkbox" name="" value="その他金融">その他金融
+        </td>
+        </tr>
+        <tr>
+           <th class="active" colspan="2">不動産/建設</th>
+           <td>
+             <input type="checkbox" name="" value="建築・土木・設計">建築・土木・設計
+            <input type="checkbox" name="" value="不動産">不動産
+            <input type="checkbox" name="" value="プラント・設備関連">プラント・設備関連
+            <input type="checkbox" name="" value="印刷">印刷
+            <input type="checkbox" name="" value="その他不動産・建設系">その他不動産・建設系
+           </td>
+         </tr>
+         <tr>
+           <th  class="active" colspan="2">その他</th>
+           <td>
+             <input type="checkbox" name="" value="教育">教育
+            <input type="checkbox" name="" value="電力・ガス・水道・エネルギー関連">電力・ガス・水道・エネルギー関連
+            <input type="checkbox" name="" value="団体・連合会・官公庁・独立行政法人">団体・連合会・官公庁・独立行政法人
+            <input type="checkbox" name="" value="農林水産・鉱業">農林水産・鉱業
+            <input type="checkbox" name="" value="その他業種">その他業種
+           </td>
+         </tr>
+         <tr>
+         </tbody>
+   　　</table>
+   　　　<h3>技術領域</h3>
+   <table class="table table-hover">
+    <tr>
+    <th class="active">開発ジャンル</th>
+    <td>
+      <input type="checkbox" name="" value="WEB系">WEB系
+     <input type="checkbox" name="" value="オープン系">オープン系
+     <input type="checkbox" name="" value="汎用系">汎用系
+     <input type="checkbox" name="" value="制御系">制御系
+     <input type="checkbox" name="" value="スマホ系">スマホ系
+     <input type="checkbox" name="" value="組み込み系">組み込み系
+    </td>
+    </tr>
+    <tr>
+      <th class="active">CMS開発</th>
+      <td>
+        <input type="checkbox" name="" value="EC-CUBE">EC-CUBE
+       <input type="checkbox" name="" value="OpenCms">OpenCms
+       <input type="checkbox" name="" value="OpenPNE">OpenPNE
+       <input type="checkbox" name="" value="WordPress">WordPress
+      </td>
+    </tr>
+    <tr>
+      <th class="active">バージョン管理システム</th>
+      <td>
+        <input type="checkbox" name="" value="Git">Git
+       <input type="checkbox" name="" value="Subversion">Subversion
+       <input type="checkbox" name="" value="CVS">CVS
+      </td>
+    </tr>
+    <tr>
+      <th class="active">データベース</th>
+      <td>
+        <input type="checkbox" name="" value="Access">Access
+        <input type="checkbox" name="" value="DB2">DB2
+        <input type="checkbox" name="" value="Oracle">Oracle
+        <input type="checkbox" name="" value="PostgreSQL">PostgreSQL
+        <input type="checkbox" name="" value="SQL Server">SQL Server
+        <input type="checkbox" name="" value="MySQL">MySQL
+        <input type="checkbox" name="" value="SQLite">SQLite
+        <input type="checkbox" name="" value="XDM">XDM
+      </td>
+      </tr>
+      <tr>
+    <th class="active">プログラミング言語</th>
+    <td>
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">選択</button>
+
+<!-- Modal -->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">検索したいプログラミング言語を選択してください</h4>
+      </div>
+      <div class="modal-body">
+        <ol class="breadcrumb">
+
+         <li><a href="#A">A</a></li>
+         <li><a href="#B">B</a></li>
+         <li><a href="#C">C</a></li>
+         <li><a href="#D">D</a></li>
+         <li><a href="#E">E</a></li>
+         <li><a href="#F">F</a></li>
+         <li><a href="#G">G</a></li>
+         <li><a href="#H">H</a></li>
+         <li><a href="#I">I</a></li>
+         <li><a href="#J">J</a></li>
+         <li><a href="#K">K</a></li>
+         <li><a href="#M">M</a></li>
+         <li><a href="#L">L</a></li>
+         <li><a href="#N">N</a></li>
+         <li><a href="#O">O</a></li>
+         <li><a href="#P">P</a></li>
+         <li><a href="#Q">Q</a></li>
+         <li><a href="#R">R</a></li>
+         <li><a href="#S">S</a></li>
+         <li><a href="#T">T</a></li>
+         <li><a href="#U">U</a></li>
+         <li><a href="#V">V</a></li>
+         <li><a href="#W">W</a></li>
+         <li><a href="#X">X</a></li>
+         <li><a href="#Y">Y</a></li>
+         <li><a href="#Z">Z</a></li>
+        </ol>
+      </div>
+      <p class="h5">A</p>
+      <input type="checkbox" name="" value="A+">A+
+      <input type="checkbox" name="" value="ABAP">ABAP
+      <input type="checkbox" name="" value="ABC">ABC
+      <input type="checkbox" name="" value="ActionScript">ActionScript
+      <input type="checkbox" name="" value="ActiveBasic">ActiveBasic
+      <input type="checkbox" name="" value="Ada">Ada
+      <input type="checkbox" name="" value="ABEL">ABEL
+      <input type="checkbox" name="" value="AHDL">AHDL
+      <input type="checkbox" name="" value="ABEL">ALGOL
+      <input type="checkbox" name="" value="ash">ash
+      <input type="checkbox" name="" value="APL"> APL
+        <input type="checkbox" name="" value="AppleScript">AppleScript
+        <input type="checkbox" name="" value="Atom">Atom
+        <input type="checkbox" name="" value="AutoIt">AutoIt
+        <input type="checkbox" name="" value="AWK">AWK
+        <p class="h5">B</p>
+        <input type="checkbox" name="" value="B">B
+        <input type="checkbox" name="" value="Bash">Bash
+        <input type="checkbox" name="" value="BASIC">BASIC
+        <input type="checkbox" name="" value="BCPL">BCPL
+        <input type="checkbox" name="" value="Befunge">Befunge
+        <input type="checkbox" name="" value="BF-BASIC'n">BF-BASIC'n
+        <input type="checkbox" name="" value="Bioera">Bioera
+        <input type="checkbox" name="" value="BLISS">BLISS
+        <input type="checkbox" name="" value="Bluespec">Bluespec
+        <input type="checkbox" name="" value="Boo">Boo
+        <input type="checkbox" name="" value="BrainCrash">BrainCrash
+        <input type="checkbox" name="" value="Brainfuck">Brainfuck
+       <p class="h5">C</p>
+       <input type="checkbox" name="" value="C">C
+   <input type="checkbox" name="" value="C#">C#
+   <input type="checkbox" name="" value="C++">C++
+   <input type="checkbox" name="" value="C++/CLI (C++ Common Language Infrastructure)">C++/CLI (C++ Common Language Infrastructure)
+   <input type="checkbox" name="" value="CAL">CAL
+   <input type="checkbox" name="" value="Caml">Caml
+   <input type="checkbox" name="" value="Cantata">Cantata
+   <input type="checkbox" name="" value="CAP-X">CAP-X
+   <input type="checkbox" name="" value="CASL">CASL
+   <input type="checkbox" name="" value="Cg">Cg
+   <input type="checkbox" name="" value="Chapel">Chapel
+   <input type="checkbox" name="" value="CHILL">CHILL
+   <input type="checkbox" name="" value="Clipper">Clipper
+   <input type="checkbox" name="" value="Clojure">Clojure
+   <input type="checkbox" name="" value="CLU">CLU
+   <input type="checkbox" name="" value="Co-array Fortran">Co-array Fortran
+   <input type="checkbox" name="" value="COBOL">COBOL
+   <input type="checkbox" name="" value="CoffeeSCript">CoffeeSCript
+   <input type="checkbox" name="" value="Common Lisp">Common Lisp
+   <input type="checkbox" name="" value="Component PasCal">Component PasCal
+   <input type="checkbox" name="" value="ConCurrent Clean">ConCurrent Clean
+   <input type="checkbox" name="" value="Con Current Prolog">Con Current Prolog
+   <input type="checkbox" name="" value="Constraint Handling Rules">Constraint Handling Rules
+   <input type="checkbox" name="" value="CPL">CPL
+   <input type="checkbox" name="" value="Csh">Csh
+   <input type="checkbox" name="" value="CUDA C/C++">CUDA C/C++
+   <input type="checkbox" name="" value="Curl">Curl
+   <input type="checkbox" name="" value="Cω">Cω
+   <p class="h5">D</p>
+   <input type="checkbox" name="" value="D">D
+<input type="checkbox" name="" value="Dart">Dart
+<input type="checkbox" name="" value="dBase">dBase
+<input type="checkbox" name="" value="Delphi">Delphi
+<input type="checkbox" name="" value="Dylan">Dylan
+<p class="h5">E</p>
+<input type="checkbox" name="" value="ECMAScript">ECMAScript
+<input type="checkbox" name="" value="EiffEl">EiffEl
+<input type="checkbox" name="" value="Elixir">Elixir
+<input type="checkbox" name="" value="Emacs Lisp">Emacs Lisp
+<input type="checkbox" name="" value="Enterprise Generation Language">Enterprise Generation Language
+<input type="checkbox" name="" value="Erlang">Erlang
+<input type="checkbox" name="" value="EscapadE">EscapadE
+<input type="checkbox" name="" value="Esterel">Esterel
+<input type="checkbox" name="" value="Euclid">Euclid
+<input type="checkbox" name="" value="Euphoria">Euphoria
+<p class="h5">F</p>
+<input type="checkbox" name="" value="F#">F#
+<input type="checkbox" name="" value="Factor">Factor
+<input type="checkbox" name="" value="False">False
+<input type="checkbox" name="" value="Fantom">Fantom
+<input type="checkbox" name="" value="Ferite">Ferite
+<input type="checkbox" name="" value="Ficl">Ficl
+<input type="checkbox" name="" value="Flavors">Flavors
+<input type="checkbox" name="" value="FlowDesigner">FlowDesigner
+<input type="checkbox" name="" value="Forth">Forth
+<input type="checkbox" name="" value="FORTRAN">FORTRAN
+<input type="checkbox" name="" value="Fortress">Fortress
+<input type="checkbox" name="" value="FoxPro">FoxPro
+<p class="h5">G</p>
+<input type="checkbox" name="" value="GLSL">GLSL
+<input type="checkbox" name="" value="Go">Go
+<input type="checkbox" name="" value="Groovy">Groovy
+<input type="checkbox" name="" value="Guarded Horn Clauses">Guarded Horn Clauses
+<p class="h5">H</p>
+<input type="checkbox" name="" value="Hack">Hack
+<input type="checkbox" name="" value="Hardware Join Java">Hardware Join Java
+<input type="checkbox" name="" value="Haskell">Haskell
+<input type="checkbox" name="" value="Haxe">Haxe
+<input type="checkbox" name="" value="HDCaml">HDCaml
+<input type="checkbox" name="" value="HLASM">HLASM
+<input type="checkbox" name="" value="HLSL">HLSL
+<input type="checkbox" name="" value="HML">HML
+<input type="checkbox" name="" value="HOLON">HOLON
+<input type="checkbox" name="" value="HSP">HSP
+<input type="checkbox" name="" value="HQ9+">HQ9+
+<input type="checkbox" name="" value="Hydra">Hydra
+<input type="checkbox" name="" value="HyperTalk">HyperTalk
+<p class="h5">I</p>
+<input type="checkbox" name="" value="Icon">Icon
+<input type="checkbox" name="" value="ID">ID
+<input type="checkbox" name="" value="IDL (interactive data language)">IDL (interactive data language)
+<input type="checkbox" name="" value="Inform">Inform
+<input type="checkbox" name="" value="InScript">InScript
+<input type="checkbox" name="" value="INTERCAL">INTERCAL
+<input type="checkbox" name="" value="Io">Io
+<input type="checkbox" name="" value="IPL">IPL
+<input type="checkbox" name="" value="ISWIM">ISWIM
+<p class="h5">J</p>
+<input type="checkbox" name="" value="J">J
+<input type="checkbox" name="" value="J">Java
+<input type="checkbox" name="" value="J">JavaScript
+<input type="checkbox" name="" value="J">JHDL
+<input type="checkbox" name="" value="J">JScript .NET
+<input type="checkbox" name="" value="J">J#
+<input type="checkbox" name="" value="J">JSX
+<input type="checkbox" name="" value="J">Julia
+<p class="h5">K</p>
+<input type="checkbox" name="" value="KEMURI">KEMURI
+<input type="checkbox" name="" value="KL1">KL1
+<input type="checkbox" name="" value="KornShell">KornShell
+<input type="checkbox" name="" value="Kotlin">Kotlin
+<p class="h5">L</p>
+<input type="checkbox" name="" value="LabVIEW">LabVIEW
+<input type="checkbox" name="" value="Lazy K">Lazy K
+<input type="checkbox" name="" value="Lava">Lava
+<input type="checkbox" name="" value="Limbo">Limbo
+<input type="checkbox" name="" value="Linda">Linda
+<input type="checkbox" name="" value="Linden Scripting Language ">Linden Scripting Language
+<input type="checkbox" name="" value="LISP">LISP
+<input type="checkbox" name="" value="LOGO">LOGO
+<input type="checkbox" name="" value="Lola">Lola
+<input type="checkbox" name="" value="LotusScript">LotusScript
+<input type="checkbox" name="" value="Lua">Lua
+<input type="checkbox" name="" value="Lucid">Lucid
+<input type="checkbox" name="" value="Lush">Lush
+<input type="checkbox" name="" value="Lustre">Lustre
+<p class="h5">M</p>
+<input type="checkbox" name="" value="M">M
+<input type="checkbox" name="" value="M4">M4
+<input type="checkbox" name="" value="Malbolge">Malbolge
+<input type="checkbox" name="" value="Mana">Mana
+<input type="checkbox" name="" value="Maple">Maple
+<input type="checkbox" name="" value="MASM">MASM
+<input type="checkbox" name="" value="MATLAB">MATLAB
+<input type="checkbox" name="" value="Mathematica">Mathematica
+<input type="checkbox" name="" value="Max">Max
+<input type="checkbox" name="" value="Mesa">Mesa
+<input type="checkbox" name="" value="MIL/W">MIL/W
+<input type="checkbox" name="" value="Mind">Mind
+<input type="checkbox" name="" value="Mindscript">Mindscript
+<input type="checkbox" name="" value="Miranda">Miranda
+<input type="checkbox" name="" value="Misa">Misa
+<input type="checkbox" name="" value="ML">ML
+<input type="checkbox" name="" value="Modula-2">Modula-2
+<input type="checkbox" name="" value="Modula-3">Modula-3
+<input type="checkbox" name="" value="MONAmona">MONAmona
+<input type="checkbox" name="" value="Mops">Mops
+<input type="checkbox" name="" value="MSIL">MSIL
+<input type="checkbox" name="" value="MyHDL">MyHDL
+<p class="h5">N</p>
+<input type="checkbox" name="" value="NASM">NASM
+<input type="checkbox" name="" value="Nemerle">Nemerle
+<input type="checkbox" name="" value="Nim">Nim
+<input type="checkbox" name="" value="Noop">Noop
+<input type="checkbox" name="" value="NScripter">NScripter
+<p class="h5">O</p>
+<input type="checkbox" name="" value="Oberon">Oberon
+<input type="checkbox" name="" value="Oberon-2">Oberon-2
+<input type="checkbox" name="" value="Object Pascal">Object Pascal
+<input type="checkbox" name="" value="Object REXX">Object REXX
+<input type="checkbox" name="" value="Object Tcl">Object Tcl
+<input type="checkbox" name="" value="Objective-C">Objective-C
+<input type="checkbox" name="" value="Objective Caml">Objective Caml
+<input type="checkbox" name="" value="Occam">Occam
+<input type="checkbox" name="" value="Ook!">Ook!
+<input type="checkbox" name="" value="OpenOffice.org Basic">OpenOffice.org Basic
+<input type="checkbox" name="" value="Oz">Oz
+<p class="h5">P</p>
+<input type="checkbox" name="" value="Pacbase">Pacbase
+<input type="checkbox" name="" value="PALASM">PALASM
+<input type="checkbox" name="" value="PARLOG">PARLOG
+<input type="checkbox" name="" value="Pascal">Pascal
+<input type="checkbox" name="" value="PBASIC">PBASIC
+<input type="checkbox" name="" value="PCN">PCN
+<input type="checkbox" name="" value="Perl">Perl
+<input type="checkbox" name="" value="PHP">PHP
+<input type="checkbox" name="" value="Pic">Pic
+<input type="checkbox" name="" value="Piet">Piet
+<input type="checkbox" name="" value="Pike">Pike
+<input type="checkbox" name="" value="Pine">Pine
+<input type="checkbox" name="" value="PL/0">PL/0
+<input type="checkbox" name="" value="PL/I">PL/I
+<input type="checkbox" name="" value="Planner">Planner
+<input type="checkbox" name="" value="PostScript">PostScript
+<input type="checkbox" name="" value="PowerShell">PowerShell
+<input type="checkbox" name="" value="Processing">Processing
+<input type="checkbox" name="" value="Prograph CPX">Prograph CPX
+<input type="checkbox" name="" value="Prolog">Prolog
+<input type="checkbox" name="" value="Pure Data">Pure Data
+<input type="checkbox" name="" value="Pxem">Pxem
+<input type="checkbox" name="" value="Python">Python
+<p class="h5">R</p>
+<input type="checkbox" name="" value="R">R
+<input type="checkbox" name="" value="Racket">Racket
+<input type="checkbox" name="" value="REALbasic">REALbasic
+<input type="checkbox" name="" value="REBOL">REBOL
+<input type="checkbox" name="" value="REXX">REXX
+<input type="checkbox" name="" value="RHDL">RHDL
+<input type="checkbox" name="" value="RPG">RPG
+<input type="checkbox" name="" value="RPL">RPL
+<input type="checkbox" name="" value="Ruby">Ruby
+<input type="checkbox" name="" value="Rust">Rust
+<p class="h5">S</p>
+<input type="checkbox" name="" value="SAL">SAL
+<input type="checkbox" name="" value="SAS">SAS
+<input type="checkbox" name="" value="Sather">Sather
+<input type="checkbox" name="" value="Scala">Scala
+<input type="checkbox" name="" value="Scheme">Scheme
+<input type="checkbox" name="" value="Scratch">Scratch
+<input type="checkbox" name="" value="Self">Self
+<input type="checkbox" name="" value="SFL">SFL
+<input type="checkbox" name="" value="Sh">Sh
+<input type="checkbox" name="" value="Shakespeare">Shakespeare
+<input type="checkbox" name="" value="Short Code">Short Code
+<input type="checkbox" name="" value="Simula">Simula
+<input type="checkbox" name="" value="Simulink">Simulink
+<input type="checkbox" name="" value="SKILL">SKILL
+<input type="checkbox" name="" value="Smalltalk">Smalltalk
+<input type="checkbox" name="" value="SMILEBASIC">SMILEBASIC
+<input type="checkbox" name="" value="SNOBOL">SNOBOL
+<input type="checkbox" name="" value="Squeak">Squeak
+<input type="checkbox" name="" value="Squirrel">Squirrel
+<input type="checkbox" name="" value="SPSS">SPSS
+<input type="checkbox" name="" value="Standard ML">Standard ML
+<input type="checkbox" name="" value="Stata">Stata
+<input type="checkbox" name="" value="Swift">Swift
+<input type="checkbox" name="" value="SystemC">SystemC
+<input type="checkbox" name="" value="SystemVerilog">SystemVerilog
+<p class="h5">T</p>
+<input type="checkbox" name="" value="TeX">TeX
+<input type="checkbox" name="" value="Tcl">Tcl
+<input type="checkbox" name="" value="Tcsh">Tcsh
+<input type="checkbox" name="" value="Tenems">Tenems
+<input type="checkbox" name="" value="TL/I">TL/I
+<input type="checkbox" name="" value="Tonyu System">Tonyu System
+<input type="checkbox" name="" value="TTS">TTS
+<input type="checkbox" name="" value="TTSneo">TTSneo
+<input type="checkbox" name="" value="Turing">Turing
+<input type="checkbox" name="" value="TypeScript">TypeScript
+<p class="h5">U</p>
+<input type="checkbox" name="" value="Unified Parallel C">Unified Parallel C
+<input type="checkbox" name="" value="Unlambda">Unlambda
+<input type="checkbox" name="" value="UnrealScript">UnrealScript
+<p class="h5">V</p>
+<input type="checkbox" name="" value="VBScript">VBScript
+<input type="checkbox" name="" value="Visual Basic .NET">Visual Basic .NET
+<input type="checkbox" name="" value="Verilog HDL">Verilog HDL
+<input type="checkbox" name="" value="VHDL">VHDL
+<p class="h5">W</p>
+<input type="checkbox" name="" value="Whitespace">Whitespace
+<input type="checkbox" name="" value="WICS">WICS
+<input type="checkbox" name="" value="WMLScript">WMLScript
+<input type="checkbox" name="" value="Wyvern">Wyvern
+<p class="h5">X</p>
+<input type="checkbox" name="" value="X">X10
+<input type="checkbox" name="" value="X">XQuery
+<input type="checkbox" name="" value="X">XSLT
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+        <button type="button" class="btn btn-primary">決定</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </td>
+    </tr>
+    <tr>
+    <th class="active">フレームワーク</th>
+    <td>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">選択</button>
+
+      <!-- モーダル・ダイアログ -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      			<div class="modal-header">
+      				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+      				<h4 class="modal-title">フレームワークを選択してください</h4>
+      			</div>
+      			<div class="modal-body">
+      				<p class="bg-primary text-left">JAVA</p>
+              <input type="checkbox" name="" value="JSF">JSF
+              <input type="checkbox" name="" value="Spring Framework">Spring Framework
+              <input type="checkbox" name="" value="Struts">Struts
+              <input type="checkbox" name="" value="Wicket">Wicket
+              <input type="checkbox" name="" value="SAStruts">SAStruts
+              <input type="checkbox" name="" value="Play Framework">Play Framework
+              <input type="checkbox" name="" value="Java EE">Java EE
+              <input type="checkbox" name="" value="Dropwizard">Dropwizard
+              <input type="checkbox" name="" value="Spark Framework">Spark Framework
+              <input type="checkbox" name="" value="Junit">Junit
+              <p class="bg-primary text-left">PHP</p>
+              <input type="checkbox" name="" value="CakePHP">CakePHP
+              <input type="checkbox" name="" value="Zend Framework">Zend Framework
+              <input type="checkbox" name="" value="Symfony">Symfony
+              <input type="checkbox" name="" value="Laravel">Laravel
+              <input type="checkbox" name="" value="CodeIgniter">CodeIgniter
+              <input type="checkbox" name="" value="Phalcon">Phalcon
+              <input type="checkbox" name="" value="Slim">Slim
+              <input type="checkbox" name="" value="FuelPHP">FuelPHP
+              <input type="checkbox" name="" value="BEAR.Sunday">BEAR.Sunday
+              <input type="checkbox" name="" value="Yii">Yii
+              <p class="bg-primary text-left">Ruby</p>
+              <input type="checkbox" name="" value="Ruby on Rails">Ruby on Rails
+              <input type="checkbox" name="" value="Sinatra">Sinatra
+              <input type="checkbox" name="" value="Padrino">Padrino
+              <input type="checkbox" name="" value="cuba microframework">cuba microframework
+              <input type="checkbox" name="" value="Phalcon">Phalcon
+              <input type="checkbox" name="" value="Ramaze">Ramaze
+              <input type="checkbox" name="" value="HANAMI">HANAMI
+              <p class="bg-primary text-left">Python</p>
+              <input type="checkbox" name="" value="Django">Django
+              <input type="checkbox" name="" value="Flask">Flask
+              <input type="checkbox" name="" value="Bottle">Bottle
+              <input type="checkbox" name="" value="Tornado">Tornado
+              <input type="checkbox" name="" value="CherryPY">CherryPY
+              <input type="checkbox" name="" value="Pyramid">Pyramid
+              <input type="checkbox" name="" value="Plone">Plone
+              <p class="bg-primary text-left">Perl</p>
+              <input type="checkbox" name="" value="Mojolicios">Mojolicios
+              <input type="checkbox" name="" value="Dancer">Dancer
+              <input type="checkbox" name="" value="Catalyst">Catalyst
+              <input type="checkbox" name="" value="Amon2">Amon2
+              <input type="checkbox" name="" value="TripletaiL">TripletaiL
+              <input type="checkbox" name="" value="Ark">Ark
+              <p class="bg-primary text-left">JavaScript</p>
+              <input type="checkbox" name="" value="AngularJS">AngularJS
+              <input type="checkbox" name="" value="Backbone.JS">Backbone.JS
+              <input type="checkbox" name="" value="Ember.js">Ember.js
+              <input type="checkbox" name="" value="Vue.js">Vue.js
+              <input type="checkbox" name="" value="Knockout.js">Knockout.js
+              <input type="checkbox" name="" value="React.js">React.js
+              <input type="checkbox" name="" value="Riot.js">Riot.js
+              <input type="checkbox" name="" value="Aurelia.js">Aurelia.js
+              <p class="bg-primary text-left">CSS</p>
+              <input type="checkbox" name="" value="Bootstrap">Bootstrap
+              <input type="checkbox" name="" value="Pure">Pure
+              <input type="checkbox" name="" value="Foundation">Foundation
+              <input type="checkbox" name="" value="Material UI">Material UI
+              <input type="checkbox" name="" value="Semantic-UI">Semantic-UI
+              <input type="checkbox" name="" value="Web Starter Kit">Web Starter Kit
+              <input type="checkbox" name="" value="Materialize">Materialize
+              <input type="checkbox" name="" value="Uikit">Uikit
+              <input type="checkbox" name="" value="Cardinal">Cardinal
+              <input type="checkbox" name="" value="Layers CSS">Layers CSS
+              <p class="bg-primary text-left">Go</p>
+              <input type="checkbox" name="" value="Echo">Echo
+              <input type="checkbox" name="" value="iris">iris
+              <input type="checkbox" name="" value="Gin">Gin
+              <input type="checkbox" name="" value="Goji">Goji
+              <input type="checkbox" name="" value="beego">beego
+              <input type="checkbox" name="" value="Revel">Revel
+              <input type="checkbox" name="" value="Martini">Martini
+              <input type="checkbox" name="" value="Gorilla">Gorilla
+              <p class="bg-primary text-left">ASP.NET</p>
+              <input type="checkbox" name="" value="ASP.NET MVC">ASP.NET MVC
+              <input type="checkbox" name="" value="ASP.NET Web Forms">ASP.NET Web Forms
+              <input type="checkbox" name="" value="Umbraco">Umbraco
+              <p class="bg-primary text-left">Scala</p>
+              <input type="checkbox" name="" value="Lift">Lift
+              <input type="checkbox" name="" value="Play">Play
+      			</div>
+      			<div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+              <button type="button" class="btn btn-primary">決定</button>
+      			</div>
+      		</div>
+      	</div>
+      </div>
+    </td>
+    </tr>
+    <tr>
+    <th class="active">OS</th>
+    <td>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">選択</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">OSを選択してください</h4>
+      </div>
+      <div class="modal-body">
+        <input type="checkbox" name="" value="AIX">AIX<br>
+                <input type="checkbox" name="" value="Alpha">Alpha<br>
+                <input type="checkbox" name="" value="AS/400">AS/400<br>
+                <input type="checkbox" name="" value="BeOS">BeOS<br>
+                <input type="checkbox" name="" value="BREW">BREW<br>
+                <input type="checkbox" name="" value="BSD">BSD<br>
+                <input type="checkbox" name="" value="eCOS">eCOS<br>
+                <input type="checkbox" name="" value="EPOC">EPOC<br>
+                <input type="checkbox" name="" value="FreeBSD">FreeBSD<br>
+                <input type="checkbox" name="" value="HP-UX">HP-UX<br>
+                <input type="checkbox" name="" value="IBM互換/MVS MSP VOS">IBM互換/MVS MSP VOS<br>
+                <input type="checkbox" name="" value="J2ME">J2ME<br>
+                <input type="checkbox" name="" value="Linux">Linux<br>
+                <input type="checkbox" name="" value="MacOS">MacOS<br>
+                <input type="checkbox" name="" value="MontaVista">MontaVista<br>
+                <input type="checkbox" name="" value="NEC ACOS">NEC ACOS<br>
+                <input type="checkbox" name="" value="Netware">Netware<br>
+                <input type="checkbox" name="" value="NORTi">NORTi<br>
+                <input type="checkbox" name="" value="PalmOS">PalmOS<br>
+                <input type="checkbox" name="" value="Solaris">Solaris<br>
+                <input type="checkbox" name="" value="Stinger">Stinger<br>
+                <input type="checkbox" name="" value="TRON">TRON<br>
+                <input type="checkbox" name="" value="UNISYS">UNISYS<br>
+                <input type="checkbox" name="" value="VxWorks">VxWorks<br>
+                <input type="checkbox" name="" value="Windows 2000">Windows 2000<br>
+                <input type="checkbox" name="" value="Windows Automotive">Windows Automotive<br>
+                <input type="checkbox" name="" value="Windows Server 2003">Windows Server 2003<br>
+                <input type="checkbox" name="" value="WindowsCE">WindowsCE<br>
+                <input type="checkbox" name="" value="WindowsME">WindowsME<br>
+                <input type="checkbox" name="" value="WindowsXP">WindowsXP<br>
+                <input type="checkbox" name="" value="μITRON">μITRON<br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+        <button type="button" class="btn btn-primary">決定</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </td>
+    </tr>
+    <tr>
+  </table>
+
+<h3>使用ミドルウェア</h3>
+<table class="table table">
+    <tbody>
+      <tr class="warning">
+<th>RDBMS</th>
+<th>グループウェア</th>
+<th>統合運用管理</th>
+<th>ストレージ管理</th>
+<th>アプリケーションサーバ関連</th>
+</tr>
+  <tr>
+<td>
+<input type="checkbox" name="" value="Adaptive Server">Adaptive Server<br>
+<input type="checkbox" name="" value="DB2">DB2<br>
+<input type="checkbox" name="" value="Firebird">Firebird<br>
+<input type="checkbox" name="" value="HiRDB">HiRDB<br>
+<input type="checkbox" name="" value="MySQL">MySQL<br>
+<input type="checkbox" name="" value="Oracle">Oracle<br>
+<input type="checkbox" name="" value="PostgreSQL">PostgreSQL<br>
+<input type="checkbox" name="" value="SQL Server">SQL Server<br>
+<input type="checkbox" name="" value="Symfoware">Symfoware<br>
+</td>
+<td>
+  <input type="checkbox" name="" value="desknet's">desknet's<br>
+  <input type="checkbox" name="" value="Exchange Server">Exchange Server<br>
+  <input type="checkbox" name="" value="StarOfice">StarOfice<br>
+  <input type="checkbox" name="" value="TeamWARE Office">TeamWARE Office<br>
+  <input type="checkbox" name="" value="サイボウズ Office">サイボウズ Office<br>
+  <input type="checkbox" name="" value="ロータス ノーツ/ドミノ">ロータス ノーツ/ドミノ<br>
+</td>
+<td>
+  <input type="checkbox" name="" value="千手ファミリー">千手ファミリー<br>
+  <input type="checkbox" name="" value="JP1">JP1<br>
+  <input type="checkbox" name="" value="OpenView">OpenView<br>
+  <input type="checkbox" name="" value="Systemwalker">Systemwalker<br>
+  <input type="checkbox" name="" value="Tivoli">Tivoli<br>
+  <input type="checkbox" name="" value="WebSAM">WebSAM<br>
+</td>
+<td>
+<input type="checkbox" name="" value="EMC ControlCenter">EMC ControlCenter<br>
+<input type="checkbox" name="" value="HP OpenView Storage">HP OpenView Storage<br>
+<input type="checkbox" name="" value="JP1/HiCommand">JP1/HiCommand<br>
+<input type="checkbox" name="" value="Softek">Softek<br>
+<input type="checkbox" name="" value="Tivoli Storage Manager">Tivoli Storage Manager<br>
+<input type="checkbox" name="" value="VERITAS Storage Foundation">VERITAS Storage Foundation<br>
+<input type="checkbox" name="" value="WebSAM iStorage">WebSAM iStorage<br>
+</td>
+<td>
+  <input type="checkbox" name="" value="Apache">Apache<br>
+  <input type="checkbox" name="" value="IIS">IIS<br>
+  <input type="checkbox" name="" value="JBOSS">JBOSS<br>
+  <input type="checkbox" name="" value="Oracle Application Server">Oracle Application Server<br>
+  <input type="checkbox" name="" value="Sun Java System Application Server">Sun Java System Application Server<br>
+  <input type="checkbox" name="" value="Tomcat">Tomcat<br>
+  <input type="checkbox" name="" value="WebLogic">WebLogic<br>
+  <input type="checkbox" name="" value="WebSphere Application Server">WebSphere Application Server<br>
+  <input type="checkbox" name="" value="ZOPE">ZOPE<br>
+</td>
+</tr>
+	</tbody>
+</table>
+<h3>使用アプリケーション</h3>
+
+<table class="table table">
+	<tbody>
+		<tr class="warning">
+			<th colspan="4">ERP</th>
+			<th rowspan="2">SCM<br>SFA・データマイニング</th>
+		</tr>
+		<tr class="warning">
+			<th colspan="2">SAP R/3(SAP)</th>
+			<th colspan="2">その他</th>
+		</tr>
+		<tr>
+      <td>
+        <input type="checkbox" name="" value="FI(財務)">FI(財務)<br>
+        <input type="checkbox" name="" value="CO(管理会計)">CO(管理会計)<br>
+        <input type="checkbox" name="" value="EC(経営管理)">EC(経営管理)<br>
+        <input type="checkbox" name="" value="">TR(財務管理)<br>
+      <input type="checkbox" name="" value="">PS(プロジェクト管理)<br>
+      <input type="checkbox" name="" value="">SD(販売管理)<br>
+      <input type="checkbox" name="" value="">PP(生産管理)<br>
+      <input type="checkbox" name="" value="">MM(在庫管理)<br>
+      </td>
+			<td>
+        <input type="checkbox" name="" value="">PM(プラント保全)<br>
+        <input type="checkbox" name="" value="">QM(品質管理)<br>
+        <input type="checkbox" name="" value="">AM(資産管理)<br>
+        <input type="checkbox" name="" value="">HR(人事管理)<br>
+        <input type="checkbox" name="" value="">IM(資本投資管理)<br>
+        <input type="checkbox" name="" value="">WF(ワークフロー)<br>
+        <input type="checkbox" name="" value="">IS(業界別ソリューション)<br>
+        <input type="checkbox" name="" value="">SCP(その他)<br>
+        </td>
+        <td>
+          <input type="checkbox" name="" value="">AVALON (IFS)<br>
+          <input type="checkbox" name="" value="">BAAN (BAAN)<br>
+          <input type="checkbox" name="" value="">BPCS (SSA)<br>
+          <input type="checkbox" name="" value="">BSS-PACK (BSS)<br>
+          <input type="checkbox" name="" value="">CA-MANMAN/X (CA)<br>
+          <input type="checkbox" name="" value="">CONTROL (CINCOM)<br>
+          <input type="checkbox" name="" value="">GEMPLANET (日立)<br>
+          <input type="checkbox" name="" value="">GLOVIA (富士通)<br>
+      </td>
+			<td>
+        <input type="checkbox" name="" value="">MFG/PRO (qad)<br>
+        <input type="checkbox" name="" value="">Movex (インテンシア)<br>
+        <input type="checkbox" name="" value="">One World (JDE)<br>
+        <input type="checkbox" name="" value="">People Soft Finance (People Soft)<br>
+        <input type="checkbox" name="" value="">Pro-Active (住商情報システム)<br>
+        <input type="checkbox" name="" value="">SyteLine (Symix)<br>
+        <input type="checkbox" name="" value="">SCAW (NTTデータ)<br>
+      </td>
+			<td>
+        <input type="checkbox" name="" value="Ariba">Ariba<br>
+        <input type="checkbox" name="" value="Commerce one">Commerce one<br>
+        <input type="checkbox" name="" value="Manugistics">Manugistics<br>
+        <input type="checkbox" name="" value="Rhythm(i2)">Rhythm(i2)<br>
+        <input type="checkbox" name="" value="SAP/APO">SAP/APO<br>
+        <input type="checkbox" name="" value="SAS">SAS<br>
+        <input type="checkbox" name="" value="SPSS">SPSS<br>
+      </td>
+		</tr>
+	</tbody>
+</table>
+          <h3>その他</h3>
+           <table class="table table-hover">
+               <tbody>
+                 <tr>
+        			<th class="warning">従業員数</th>
+        			<td colspan="3">
+                <input type="text" name="EmployeeNum1" placeholder="5">人～<input type="text" name="EmployeeNum2" placeholder="10">人
+              </td>
+        		</tr>
+        		<tr>
+        			<th class="warning">設立からの年数</th>
+              <td colspan="3">
+                <input type="text" name="EstablishmentYear１" placeholder="10">年～<input type="text" name="EstablishmentYear2" placeholder="50">年
+              </td>
+        		</tr>
+        		<tr>
+        			<th class="warning">業務領域</th>
+        			<td colspan="3">
+                <input type="checkbox" name="BusinessDomain" value="財務、会計系" />財務、会計系
+                <input type="checkbox" name="BusinessDomain" value="人事、給与、労務系" />人事、給与、労務系
+                <input type="checkbox" name="BusinessDomain" value="営業、販売系 " />営業、販売系
+                <input type="checkbox" name="BusinessDomain" value="生産管理系 " />生産管理系
+                <input type="checkbox" name="BusinessDomain" value="物流系" />物流系
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+      	　</tbody>
+  　　</table>
+  　<br>
+       <button type="button" class="btn btn-primary btn-lg btn-block">会社検索GO!!</button>
+    </div>
+  </div>
+</div>
+</div>

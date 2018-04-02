@@ -40,21 +40,34 @@
   <div class="panel panel-default">
   <div class="panel-heading">企業情報</div>
   <div class="panel-body">
-     <%= f.label :Establishment ,"設立年月日" %>
-      <%= @user.Establishment %><br>
-      <%= f.label :listing ,"上場有無" %>
-      <%= @user.listing %><br>
-      <%= f.label :Capitalstock ,"資本金（単位：万円）" %>
-      <%= @user.Capitalstock %><br>
-      <%= f.label :zipcode ,"郵便番号" %>
-      <%= @user.zipcode %><br>
-     
-     <%= f.label :dwelling ,"住所" %>
-     <%= @user.area %><%= @user.dwelling %><br>
-     <%= f.label :BuildName ,"建物名" %>
-     <%= @user.BuildName %><br>
-		
-    
+    <table class="table table-bordered">
+	<tbody>
+		<tr>
+			<th><%= f.label :Establishment ,"設立年月日" %></th>
+			<td><%= @user.Establishment %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :listing ,"上場有無" %></th>
+			<td><%= @user.listing %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :Capitalstock ,"資本金" %></th>
+			<td><%= @user.Capitalstock %>万円</td>
+		</tr>
+		<tr>
+			<th><%= f.label :zipcode ,"郵便番号" %></th>
+			<td><%= @user.zipcode %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :dwelling ,"住所" %></th>
+			<td><%= @user.area %><%= @user.dwelling %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :BuildName ,"建物名" %></th>
+			<td><%= @user.BuildName %></td>
+		</tr>
+	</tbody>
+</table>
   </div>
 </div>
 </div>
